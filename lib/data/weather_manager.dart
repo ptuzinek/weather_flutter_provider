@@ -60,7 +60,7 @@ class WeatherManager extends ChangeNotifier {
 
   Future getCityWeather(String cityName) async {
     http.Response response = await http.get(Uri.parse(
-        'http://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=$apiKey'));
+        'https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=$apiKey'));
 
     if (response.statusCode == 200) {
       String data = response.body;
@@ -75,7 +75,7 @@ class WeatherManager extends ChangeNotifier {
 
   void getLocalisationWeather() async {
     http.Response response = await http.get(Uri.parse(
-        'http://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$apiKey'));
+        'https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$apiKey'));
 
     if (response.statusCode == 200) {
       String data = response.body;
