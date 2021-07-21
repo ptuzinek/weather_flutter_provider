@@ -1,0 +1,6 @@
+{
+    "getWeather": "Get Weather",
+    "@language":{
+        "description": "The Get Weather button text"
+    }
+}
